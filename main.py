@@ -13,18 +13,25 @@ def main():
     print("1. Add Habit")
     print("2. View Habits")
     print("3. Mark Done")
-    print("4. Exit")
+    print("4. Delete habit")
+    print("5. Exit")
     print()
 
     choice = input("Choose: ")
 
+    data =load_data()
+
     if choice == "1":
-      add_habit_to_json()
+      add_habit(data)
     elif choice == "2":
-      view_habits()
+      view_habits(data)
     elif choice == "3":
-      mark_done()
+      habit_name = input("Enter habit name to mark done: ").strip().title()
+      mark_done(data, habit_name)
     elif choice == "4":
+      habit_name = input("Enter habit name to delete: ").strip().title()
+      delete_habit(data, habit_name)
+    elif choice == "5":
       break
     else:
       print("Invalid choice")
@@ -51,10 +58,8 @@ def save_data(data):
 
 
 
-def add_habit_to_json():
-  data = load_data()
-
-  new_habit = input("Enter habit name: ").strip().capitalize()
+def add_habit(data):
+  new_habit = input("Enter habit name: ").strip().title()
 
   if new_habit in data:
     print(f"'{new_habit}' already exists.")
@@ -66,20 +71,25 @@ def add_habit_to_json():
   print(f"Succesfully added {new_habit}")
 
 
+def delete_habit(data, habit_name):
+  if habit_name in data:
+    del data[habit_name]
 
-def view_habits():
-  data = load_data()
+  save_data(data)
+  print(f"Succesfully deleted {habit_name}")
+
+
+
+def view_habits(data):
   print("\n--- HABITS ---")
   for habit, info in data.items():
-    print(f"{habit}: Streak -> {info['streak']} days (Last done : {info['last_done']}) ")
+    print(f"{habit}: Streak -> 🔥 {info['streak']} days | Last: {info['last_done']} ")
+  if not data:
+    print("No habits found.")
+    return
 
 
-
-def mark_done():
-  data = load_data()
-
-  habit = input("Enter habit name to mark done: ").strip().capitalize()
-  
+def mark_done(data, habit):
   if habit not in data:
     print("Habit not found")
     return
