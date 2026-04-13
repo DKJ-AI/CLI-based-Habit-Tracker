@@ -116,12 +116,6 @@ habitflow/
 
 ---
 
-## 📌 Final Project — CS50P
-
-This project was built as the final project for [CS50's Introduction to Programming with Python](https://cs50.harvard.edu/python/) by Harvard / edX.
-
----
-
 ## 👤 Author
 
 **Your Name**
