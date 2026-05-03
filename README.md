@@ -118,6 +118,6 @@ habitflow/
 
 ## 👤 Author
 
-**Your Name**
+**Dipak Jena**
 - GitHub: DKJ-AI(https://github.com/DKJ-AI)
 
