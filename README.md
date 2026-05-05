@@ -1,4 +1,4 @@
-# 🔥 HabitFlow — CLI Habit Tracker
+# 🔥 Habit Tracker
 
 > Build streaks. Break patterns. Show up every day.
 
