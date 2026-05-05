@@ -1,10 +1,42 @@
 {
-    "Gym": {
+    "Sleep 7-8 Hours 💤": {
         "streak": 1,
-        "last_done": "2026-04-12"
+        "last_done": "2026-05-05"
     },
-    "Coding": {
+    "Eat Healthy Meals 🥗": {
         "streak": 1,
-        "last_done": "2026-04-12"
+        "last_done": "2026-03-03"
+    },
+    "Social Media ≤ 90min 📱": {
+        "streak": 0,
+        "last_done": null
+    },
+    "No Porn/Alcohol 🚫": {
+        "streak": 0,
+        "last_done": null
+    },
+    "Drink 2L Water 💧": {
+        "streak": 1,
+        "last_done": "2026-05-05"
+    },
+    "Study ≥ 2 Hours 💻": {
+        "streak": 1,
+        "last_done": "2026-03-03"
+    },
+    "Exercise 30 Minutes 🏋🏻‍♀️": {
+        "streak": 0,
+        "last_done": null
+    },
+    "Read 30 Minutes 📖": {
+        "streak": 0,
+        "last_done": null
+    },
+    "Journal & Self-reflect 🖋️": {
+        "streak": 0,
+        "last_done": null
+    },
+    "Plan Tomorrow's Tasks 📋": {
+        "streak": 0,
+        "last_done": null
     }
 }

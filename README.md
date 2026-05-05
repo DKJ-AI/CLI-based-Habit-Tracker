@@ -6,28 +6,17 @@ A lightweight command-line habit tracker built in Python. Track your daily habit
 
 ---
 
-## 📸 Demo
-
-<!-- REPLACE THESE with your actual screenshots -->
-<img width="692" height="290" alt="Screenshot 2026-04-13 020741" src="https://github.com/user-attachments/assets/0c9e70c5-ecb1-489f-a79a-fd27c14f2d12" />
-
-<img width="648" height="177" alt="Screenshot 2026-04-13 020805" src="https://github.com/user-attachments/assets/a345051e-003d-4a15-8aca-ae14e1b37429" />
-
-<img width="565" height="123" alt="Screenshot 2026-04-13 020913" src="https://github.com/user-attachments/assets/53b51f8d-a693-4e42-be91-d2e21b0be3f6" />
-
-
-
----
-
 ## ✨ Features
 
-- ✅ Add habits with a single command
+- ✅ Add habits with a name of your choice
 - 🔥 Automatic streak tracking — consecutive days = growing streak
 - 💀 Streak reset logic — miss a day and it resets to 1
 - 🚫 Duplicate protection — can't add the same habit twice
 - 🗑️ Delete habits cleanly
+- 📋 Number-based selection — no typing habit names, pick by number
+- 📊 Weekly report — see which habits are active or inactive this week
 - 💾 Persistent JSON storage — data survives between sessions
-- 🧪 Full pytest test suite included
+- 🧪 pytest test suite included
 
 ---
 
@@ -40,16 +29,16 @@ A lightweight command-line habit tracker built in Python. Track your daily habit
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/habitflow.git
+git clone https://github.com/DKJ-AI/habitflow.git
 cd habitflow
-python main.py
+python tracker.py
 ```
 
 ### Running Tests
 
 ```bash
 pip install pytest
-pytest test_main.py -v
+pytest test_tracker.py -v
 ```
 
 ---
@@ -57,11 +46,12 @@ pytest test_main.py -v
 ## 🎮 Usage
 
 ```
-1. Add Habit       → Add a new habit to track
-2. View Habits     → See all habits with current streaks
-3. Mark Done       → Mark today's habit complete
-4. Delete Habit    → Remove a habit permanently
-5. Exit
+1. Add Habit          → Add a new habit to track
+2. View Habits        → See all habits with current streaks
+3. Mark Done          → Pick a habit by number and mark it done today
+4. Delete Habit       → Remove a habit permanently
+5. Weekly Report      → See active/inactive status for the past 7 days
+6. Exit
 ```
 
 ---
@@ -70,9 +60,9 @@ pytest test_main.py -v
 
 ```
 habitflow/
-├── main.py          # Core logic — all functions
-├── test_main.py     # pytest test suite (20 tests)
-├── habit.json       # Auto-generated data file
+├── tracker.py        # Core logic — HabitTracker class
+├── test_tracker.py   # pytest test suite
+├── habit.json        # Auto-generated data file
 └── README.md
 ```
 
@@ -84,26 +74,14 @@ habitflow/
 {
     "Gym": {
         "streak": 3,
-        "last_done": "2026-04-13"
+        "last_done": "2026-05-05"
     },
     "Coding": {
         "streak": 7,
-        "last_done": "2026-04-13"
+        "last_done": "2026-05-05"
     }
 }
 ```
-
----
-
-## 🧪 Test Coverage
-
-| Module | Tests |
-|--------|-------|
-| `load_data` | File not found, valid file, empty file, corrupted JSON, wrong type |
-| `save_data` | Writes correctly, overwrites old data |
-| `add_habit` | New habit, duplicate blocked, multiple habits |
-| `mark_done` | First time, consecutive streak, broken streak, already done today, not found |
-| `delete_habit` | Existing habit, only habit, nonexistent, preserves other streaks |
 
 ---
 
@@ -113,11 +91,3 @@ habitflow/
 - `json` — data persistence
 - `datetime` — streak logic
 - `pytest` — testing
-
----
-
-## 👤 Author
-
-**Dipak Jena**
-- GitHub: DKJ-AI(https://github.com/DKJ-AI)
-
