@@ -1,4 +1,4 @@
-# 🔥 Habit Tracker
+# 🔥 Abhyas Tracker
 
 > Build streaks. Break patterns. Show up every day.
 
@@ -20,29 +20,6 @@ A lightweight command-line habit tracker built in Python. Track your daily habit
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Python 3.6+
-- No external dependencies (stdlib only)
-
-### Installation
-
-```bash
-git clone https://github.com/DKJ-AI/habitflow.git
-cd habitflow
-python tracker.py
-```
-
-### Running Tests
-
-```bash
-pip install pytest
-pytest test_tracker.py -v
-```
-
----
-
 ## 🎮 Usage
 
 ```
@@ -59,7 +36,7 @@ pytest test_tracker.py -v
 ## 📁 Project Structure
 
 ```
-habitflow/
+Abhyas-Tracker/
 ├── tracker.py        # Core logic — HabitTracker class
 ├── test_tracker.py   # pytest test suite
 ├── habit.json        # Auto-generated data file
@@ -91,3 +68,7 @@ habitflow/
 - `json` — data persistence
 - `datetime` — streak logic
 - `pytest` — testing
+
+---
+
+I build this as the final project of CS50P course and first step for my own habit tracker - Abhyas Tracker
